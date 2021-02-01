@@ -27,8 +27,8 @@ do
 	local LAYER_COUNT = 12
   
 	local dlg = Dialog()
-	dlg:entry   {   id= "rows",
-	label= "EDGE2file Layer Count per rows:"
+	dlg:entry   {   id= "layercount",
+	label= "EDGE2のファイルの総レイヤー数を入力してください"
 	}
   
 	dlg:button{ id="ok", text="OK" }
@@ -37,13 +37,28 @@ do
   
 	local data = dlg.data
   
-	if data.ok then
+	local dlg = Dialog()
+	dlg:entry   {   id= "rows",
+	label= "EDGE2の1行あたりのレイヤー数を入力してください"
+	}
   
-	  LAYER_COUNT = data.rows
+	dlg:button{ id="ok", text="OK" }
+	dlg:button{ id="cancel", text="Cancel" }
+	dlg:show()
+
+	local data2 = dlg.data
+
+
+	if data.ok and data2.ok then
+  
+	  LAYER_COUNT = data.layercount
+	  ROWCOUNT = data2.rows
 	  app.transaction(
 	
 		function()
 		  for i = 1, (ROWCOUNT-LAYER_COUNT%ROWCOUNT), 1 do
+			-- 先頭からレイヤーを削除
+			app.command.RemoveLayer()
 		  end
 	  
 		end)
