@@ -65,8 +65,6 @@ do
           quantity=(addquantity.addcount*i),
           wrap=false
         }
-
-      app.alert("Loopend")
                     
   end
 
