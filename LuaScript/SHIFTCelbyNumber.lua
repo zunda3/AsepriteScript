@@ -47,10 +47,10 @@ do
       -- 正攻法
       app.command.Copy()
       spr:newCel(app.activeLayer, app.activeSprite.frames[firstFrameCount+i])
-      app.activeCel = app.activeLayer.cels[firstFrameCount+i]
+      app.activeCel = app.activeLayer:cel(firstFrameCount+i)
       app.command.Paste()
 
-      -- 救済処置（ただしフレームが追加される）１
+      -- 救済処置（ただしフレームが追加される）
       -- app.command.Copy()
       -- app.command.NewFrame()
       -- app.command.Paste()
@@ -65,6 +65,8 @@ do
           quantity=(addquantity.addcount*i),
           wrap=false
         }
+
+      app.alert("Loopend")
                     
   end
 
