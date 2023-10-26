@@ -36,7 +36,7 @@ dlg:combobox {
         local newLayerName = dlg.data.new_layer_name
         app.activeLayer.name = newLayerName
 
-        --POWER CODING(レイヤ名も変えたいときだけコメント外してください)
+        --POWER CODING(レイヤ背景色も変えたいときだけコメント外してください)
         -- if newLayerName == "髪" or 
         -- newLayerName == "髪背面" or 
         -- newLayerName == "顔" or 
