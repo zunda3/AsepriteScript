@@ -1,11 +1,11 @@
 local dlg = Dialog("Rename Layer")
---色の定義
+--色の定義(define color informations)
 local HUMAN = Color{ r=209, g=134, b=223 }
 local CLOTH = Color{ r=106, g=205, b=91 }
 local BACKGROUND = Color{ r=20, g=20, b=200 }
 local NONE = Color{ r=0, g=0, b=0 }
 
---リスト内容の定義
+--リスト内容の定義(define layer name collections)
 local layerNamesSelection = 
 {
 "髪",
@@ -36,7 +36,9 @@ dlg:combobox {
         local newLayerName = dlg.data.new_layer_name
         app.activeLayer.name = newLayerName
 
-        --POWER CODING(レイヤ背景色も変えたいときだけコメント外してください)
+        --(レイヤ背景色も変えたいときだけコメント外してください)
+        --(The following processes are change the layer color.
+        -- If you want to change the color, disable these comment out.)
         -- if newLayerName == "髪" or 
         -- newLayerName == "髪背面" or 
         -- newLayerName == "顔" or 
