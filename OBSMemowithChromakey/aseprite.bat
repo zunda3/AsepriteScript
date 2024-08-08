@@ -1,1 +1,1 @@
-"C:\Program Files (x86)\Steam\steamapps\common\Aseprite\Aseprite.exe" ".\ホワイトボード.aseprite"
+"C:\Program Files (x86)\Steam\steamapps\common\Aseprite\Aseprite.exe" ".\WhiteBoard.aseprite"

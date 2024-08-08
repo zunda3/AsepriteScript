@@ -3,7 +3,7 @@
 #====================================================================
 Param(
     [String]$ProcessName="*",   # プロセス名
-    [String]$WindowTitle="ホワイトボード.aseprite*",  # ウインドウタイトル(正規表現)
+    [String]$WindowTitle="WhiteBoard.aseprite*",  # ウインドウタイトル(正規表現)
     [Int32]$Width="1260",        # ウインドウ幅
     [Int32]$Height="760"        # ウインドウ高さ
 )
